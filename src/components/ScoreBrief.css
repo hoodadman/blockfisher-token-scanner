@@ -1,0 +1,51 @@
+.brief {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--bg-raised, #151d28);
+  border: 1px solid var(--line, #2c3b4d);
+  border-radius: 14px;
+}
+
+.brief__block h3 {
+  margin: 0 0 4px;
+  color: var(--muted, #b5c2d1);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.brief__block p {
+  margin: 0;
+  color: var(--text, #e7eef6);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.brief__toggle {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--accent, #3c7dff);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.brief__toggle:hover {
+  text-decoration: underline;
+}
+
+.brief__toggle:focus-visible {
+  outline: 2px solid var(--accent, #3c7dff);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.brief .panel-metrics {
+  margin-top: 8px;
+}

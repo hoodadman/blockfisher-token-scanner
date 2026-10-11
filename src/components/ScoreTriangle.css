@@ -1,0 +1,151 @@
+.tri {
+  --tri-green: #3dbe7a;
+  --tri-yellow: #f2c200;
+  --tri-orange: #ff8a62;
+  --tri-red: #f07171;
+  --tri-none: #5c6e82;
+  --tri-tone: var(--tri-none);
+
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  aspect-ratio: 360 / 340;
+}
+
+.tri--green {
+  --tri-tone: var(--tri-green);
+}
+
+.tri--yellow {
+  --tri-tone: var(--tri-yellow);
+}
+
+.tri--orange {
+  --tri-tone: var(--tri-orange);
+}
+
+.tri--red {
+  --tri-tone: var(--tri-red);
+}
+
+.tri__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tri-petal {
+  cursor: pointer;
+  outline: none;
+}
+
+.tri-petal__track {
+  fill: #101820;
+  stroke: #2c3b4d;
+  stroke-width: 1.5;
+}
+
+.tri-petal__fill {
+  stroke: none;
+  transition: fill 0.3s ease;
+}
+
+.tri-petal--green .tri-petal__fill {
+  fill: var(--tri-green);
+}
+
+.tri-petal--yellow .tri-petal__fill {
+  fill: var(--tri-yellow);
+}
+
+.tri-petal--orange .tri-petal__fill {
+  fill: var(--tri-orange);
+}
+
+.tri-petal--red .tri-petal__fill {
+  fill: var(--tri-red);
+}
+
+.tri-petal--none .tri-petal__fill {
+  fill: var(--tri-none);
+}
+
+.tri-petal[data-active] .tri-petal__track,
+.tri-petal:focus-visible .tri-petal__track {
+  stroke: #e7eef6;
+}
+
+.tri-petal__label {
+  fill: #e7eef6;
+  font-size: 13px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.tri__ring-track {
+  fill: none;
+  stroke: var(--tri-tone);
+  stroke-width: 5;
+}
+
+.tri__core {
+  fill: #151d28;
+  stroke: #2c3b4d;
+  stroke-width: 1;
+}
+
+.tri__score {
+  position: absolute;
+  left: 50%;
+  top: calc(168 / 340 * 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.tri__number {
+  color: var(--tri-tone);
+  font-family: "Fraunces", "Iowan Old Style", Palatino, serif;
+  font-size: 32px;
+  font-weight: 520;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.tri__max {
+  margin-top: 4px;
+  color: #b5c2d1;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.tri__hover {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  padding: 6px 10px;
+  background: #0c1218;
+  border: 1px solid #2c3b4d;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  color: #e7eef6;
+  font-size: 13px;
+  font-weight: 600;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tri-petal__fill {
+    transition: none;
+  }
+}
